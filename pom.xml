@@ -29,6 +29,34 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+        <cloudhub2Deployment>
+            <uri>https://anypoint.mulesoft.com</uri>
+
+            <provider>MC</provider>
+
+            <environment>Sandbox</environment>
+
+            <applicationName>analysis</applicationName>
+
+            <target>Shared Space</target>
+
+            <muleVersion>${app.runtime}</muleVersion>
+
+            <javaVersion>17</javaVersion>
+
+            <releaseChannel>EDGE</releaseChannel>
+
+            <replicas>1</replicas>
+
+            <vCores>0.1</vCores>
+
+            <username>${env.ANYPOINT_USERNAME}</username>
+
+            <password>${env.ANYPOINT_PASSWORD}</password>
+
+        </cloudhub2Deployment>
+    </configuration>
 			</plugin>
 		</plugins>
 	</build>
