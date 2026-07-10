@@ -20,7 +20,7 @@ jobs:
           java-version: '17'
 
       - name: Build and Deploy
-        run: mvn clean deploy
+        run: mvn clean package mule:deploy
         env:
           ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
           ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
