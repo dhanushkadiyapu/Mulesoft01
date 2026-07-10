@@ -39,7 +39,7 @@
 
             <applicationName>analysis</applicationName>
 
-            <target>Shared Space</target>
+            <target>Cloudhub-US-East-2</target>
 
             <muleVersion>${app.runtime}</muleVersion>
 
